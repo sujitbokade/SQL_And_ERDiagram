@@ -1,0 +1,30 @@
+show databases;
+create database AddressBook;
+use AddressBook;
+create table AddressBook(id int auto_increment, firstName varchar(15), lastName varchar(15), address varchar(50), city varchar(15),state varchar(20), zip varchar(6), phone_number varchar(10), email varchar(30), primary key(id));
+desc AddressBook;
+insert into AddressBook(firstName, lastName, address, city, state, zip, phone_number, email) values
+("Sujit","Bokade","Barshi","Barshi","Maharashtra","413411","9130754042","sujitbokade@gmail.com"),
+("Rohit","Pawar","Solapur","Solapur","Maharashtra","413412","7875233601","rohitpawar@gmail.com");
+select * from AddressBook;
+update AddressBook set address="Uplai Road" where firstName="Sujit";
+select * from AddressBook;
+delete from AddressBook where firstName="Rohit";
+select * from AddressBook;
+insert into AddressBook (firstName, lastName, address, city, state, zip, phone_number, email) values ("Rohan","Pawar","Solapur","Solapur","Maharashtra","413412","7875233601","rohanpawar@gmail.com");
+select * from AddressBook;
+select * from AddressBook where city="Barshi";
+select * from AddressBook where state="Maharashtra";
+select count(firstName) from AddressBook where city="solapur";
+select count(firstName) from AddressBook where city="Barshi" or state="Maharastra";
+select * from AddressBook;
+delete from AddressBook where email="rohitpawar@gmail.com";
+select * from AddressBook;
+create table family(firstName varchar(20), lastName varchar(20), address varchar(50),city varchar(10), state varchar(15), zipCode int, phoneNumber int, email varchar(20));
+insert into family() values ("abc", "xyz", "pune", "pune", "Maharashtra", 415001,123456789,"abc.xyz@gmail.com");
+show tables;
+select * from family;
+create table friends(firstName varchar(20), lastName varchar(20), address varchar(50),city varchar(10), state varchar(15), zipCode int, phoneNumber int, email varchar(20));
+insert into friends() values ("mno", "pqr", "kothrud", "pune", "Maharashtra", 415001,123456789,"mno.pqr@gmail.com");
+show tables;
+select * from friends;
